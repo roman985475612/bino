@@ -1,0 +1,26 @@
+.buttons {
+    margin-top: 60px;
+
+    a {
+        @include btn($bg: $red, $two-button: true);
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .buttons {
+
+        a {
+            display: block;
+            margin: 10px auto;
+
+            &:first-child {
+                margin: 15px auto;
+            }
+
+            &:last-child {
+                margin: 15px auto;
+            }
+        }
+    }
+}
