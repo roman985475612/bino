@@ -1,0 +1,2 @@
+# BINO
+## Landing page
