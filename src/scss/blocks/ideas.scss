@@ -1,0 +1,63 @@
+.ideas {
+    box-sizing: border-box;
+    padding: 30px 50px 80px;
+    background-color: $white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+
+    &__icon {
+        position: relative;
+        margin: 50px auto;
+        width: 127px;
+        height: 127px;
+        background-color: $red;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 34px;
+        height: 40px;
+        fill: $white;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1.35px;
+        color: $gray-title;
+        text-align: center;
+        text-transform: uppercase;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 20px auto;
+            width: 41px;
+            height: 1px;
+            background-color: $gray-title;
+            border-bottom: 1px solid $border-line;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        font-family: 'Source Sans Pro';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 1.05px;
+        text-align: center;
+        color: $gray-text;
+    }
+
+    &__btn {
+        @include btn() {
+            display: block;
+            margin: 20px auto;
+            width: 145px;
+        };
+    }
+}

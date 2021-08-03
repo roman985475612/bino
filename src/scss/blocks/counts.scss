@@ -1,0 +1,112 @@
+.counts {
+    position: relative;
+    padding: 120px 0 110px;
+    background: url('../img/counts-bg.webp') center no-repeat;
+    background-size: cover;
+
+    @media (max-width: 980px) {
+        padding: 50px 0;
+    }
+
+    &::after {
+        content: '';
+        background-color: rgba(0, 0, 0, .5);
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        z-index: 2;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        margin: 20px 0;
+        flex-basis: 20%;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            flex-basis: 45%;
+        }
+
+        @media (max-width: 480px) {
+            flex-basis: 100%;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin: 0 auto 40px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        width: 109px;
+        height: 109px;
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        fill: $white;
+        width: 35px;
+        height: 35px;
+
+        &--img1 {
+            width: 37px;
+            height: 32px;                
+        }
+
+        &--img2 {
+            width: 40px;
+            height: 40px;
+        }
+
+        &--img3 {
+            width: 35px;
+            height: 40px;
+        }
+
+        &--img4 {
+            width: 35px;
+            height: 35px;
+        }
+
+        &--img5 {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &__number {
+        margin: 10px 0;
+        font-family: 'Source Sans Pro';
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: $white-gray;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin: 10px 0;
+        font-family: 'Source Sans Pro';
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: .9px;
+        color: $white-gray;
+        text-transform: capitalize;
+    }
+}
