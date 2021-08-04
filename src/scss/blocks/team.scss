@@ -1,0 +1,213 @@
+.team {
+    margin-top: 140px;
+    padding: 140px 0 470px;
+    background: url('../img/team-line.webp') center bottom no-repeat,
+                url('../img/team-bg.webp') center no-repeat;
+
+    @media (max-width: 1080px) {
+        padding: 140px 0;
+        background: url('../img/team-bg.webp') center no-repeat;
+        background-size: cover;
+    }
+
+    @media (max-width: 980px) {
+        margin-top: 50px;
+        padding: 50px 0;
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__title {
+        font-family: 'Source Sans Pro';
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 3.6px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+    }
+
+    &__text {
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 29px;
+        text-align: center;
+        color: $white-gray;
+    }
+
+    &__divider {
+        @include divider($white);
+    }
+            
+    &__list {
+
+        @media (max-width: 1080px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        width: 200px;
+
+        &::after {
+            content: '';
+            width: 1px;
+            height: 50px;
+            display: block;
+            background-color: $white;
+            position: absolute;
+            left: 50%;
+            bottom: -58px;
+            transform: translate(-50%);
+            opacity: 0;
+            transition: opacity .5s;
+
+            @media (max-width: 1080px) {
+                display: none;
+            }
+        }
+
+        &:hover {
+
+            &::after {
+                opacity: 1;
+            }        
+
+            .team {
+
+                &__picture {
+                    transform: scale(1.3);
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &__info {
+                    z-index: 1;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &--item1 {
+            left: 0;
+            bottom: -230px;
+        }
+
+        &--item2 {
+            left: 265px;
+            bottom: -195px;
+        }
+
+        &--item3 {
+            left: 530px;
+            bottom: -195px;
+        }
+
+        &--item4 {
+            right: 190px;
+            bottom: -230px;
+        }
+
+        &--item5 {
+            right: 0;
+            bottom: -205px;
+        }
+
+        @media (max-width: 1080px) {
+            position: relative;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            margin: 25px 0;
+            width: auto;
+            flex-basis: 20%;
+        }
+
+        @media (max-width: 768px) {
+            flex-basis: 45%;
+        }
+
+        @media (max-width: 480px) {
+            flex-basis: 100%;
+        }
+    }
+
+    &__picture {
+        margin: 0 auto;
+        width: 51px;
+        height: 51px;
+        border: 3px solid $red;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: transform .5s;
+        z-index: 2;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            background-color: rgba(231, 76, 60, .5);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__info {
+        width: 100%;
+        position: absolute;
+        bottom: -160px;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .5s;
+
+        @media (max-width: 1080px) {
+            position: static;
+            opacity: 1;
+        }
+    }
+
+    &__name {
+        margin: 10px 0;
+        font-family: 'Open Sans';
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 1.8px;
+        color: $red;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    &__job {
+        margin: 10px 0;
+        font-family: 'Source Sans Pro';
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 1.4px;
+        color: $white-gray;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
