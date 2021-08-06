@@ -1,0 +1,36 @@
+.form {
+
+    &__group {
+        margin-bottom: 20px;
+    }
+
+    &__label,
+    &__control {
+        font-size: 14px;
+        line-height: 24px;
+        color: $gray-text;
+    }
+
+    &__control {
+        padding: 7px 0;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $border-icon;
+        box-shadow: none;
+        font-weight: 600;
+
+        &--textarea {
+            resize: none;
+            outline: none;
+            height: 25px;
+        }
+    }
+
+    &__btn {
+        @include btn() {
+            cursor: pointer;
+            margin: 20px auto;
+            width: 145px;
+        };
+    }
+}

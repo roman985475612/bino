@@ -1,61 +1,46 @@
 .menu {
 
-    ul {
+    &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
 
-        li {
-            margin: 0 5px;
-
-            a {
-                padding-bottom: 17px;
-                border-bottom: 1px solid transparent;
-                color: $white-gray;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 14px;
-                line-height: 16px;
-                transition-duration: 300ms;
-                transition-property: color, border-bottom-color;
-
-                &:hover {
-                    color: $red;
-                    border-bottom-color: $red;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .menu {
-
-        ul {
-
-            li {
-                margin: 5px;
-    
-                a {
-                    padding-bottom: 0;
-                    border-bottom: none;
-    
-                    &:hover {
-                        border-bottom: none;
-                    }
-                }
-            }    
-        }
-    }
-}
-
-@media screen and (max-width: 560px) {
-
-    .menu {
-
-        ul {
+        @media screen and (max-width: 560px) {
             justify-content: center;
+        }
+    }
+
+    &__item {
+        margin: 0 5px;
+
+        @media screen and (max-width: 768px) {
+            margin: 5px;
+        }
+    }
+
+    &__link {
+        padding-bottom: 17px;
+        border-bottom: 1px solid transparent;
+        color: $white-gray;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        transition-duration: 300ms;
+        transition-property: color, border-bottom-color;
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        &:hover {
+            color: $red;
+            border-bottom-color: $red;
+
+            @media screen and (max-width: 768px) {
+                border-bottom: none;
+            }
         }
     }
 }

@@ -1,0 +1,23 @@
+.page-footer {
+    padding: 35px 0;
+    background-color: $dark-bg;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 580px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__copyright {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $gray-text;
+    }
+}

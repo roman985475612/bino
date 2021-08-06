@@ -1,0 +1,75 @@
+.keep {
+    padding-bottom: 140px;
+    background-color: $white-gray;
+
+    @media (max-width:980px) {
+        padding-bottom: 50px;
+    }
+    
+    &__title {
+        font-family: 'Source Sans Pro';
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 3.6px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $gray-title;
+    }
+
+    &__subtitle {
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 29px;
+        text-align: center;
+        color: $gray-text;
+    }
+
+    &__divider {
+        @include divider($gray-text);
+    }
+
+    &__block {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__left,
+    &__right {
+        box-sizing: border-box;
+        padding: 95px;
+        background-color: $white;
+        border-radius: 2px/5px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+        
+        @media (max-width:980px) {
+            padding: 60px;
+        }
+        
+        @media (max-width:768px) {
+            padding: 50px;
+        }
+        
+        @media (max-width:320px) {
+            padding: 30px;
+        }
+    }
+
+    &__left {
+        flex-basis: 40%;
+
+        @media (max-width: 768px) {
+            flex-basis: 100%;
+        }
+    }
+
+    &__right {
+        flex-basis: 56%;
+
+        @media (max-width: 768px) {
+            flex-basis: 100%;
+        }
+    }
+}

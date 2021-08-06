@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-      <div class="section-wrap">
+      <div id="top" class="section-wrap">
           <div class="section-top">
               <div class="wrap">
                   <div class="section-top__header">
@@ -20,14 +20,14 @@
                       </div>
                       <div class="section-top__menu menu">
                           <nav>
-                              <ul>
-                                  <li><a href="#home">home</a></li>
-                                  <li><a href="#about">about us</a></li>
-                                  <li><a href="#portfolio">portfolio</a></li>
-                                  <li><a href="#pricing">pricing</a></li>
-                                  <li><a href="#team">team</a></li>
-                                  <li><a href="#blog">blog</a></li>
-                                  <li><a href="#contact">contact</a></li>
+                              <ul class="menu__list">
+                                  <li class="menu__item"><a class="menu__link" href="#top">home</a></li>
+                                  <li class="menu__item"><a class="menu__link" href="#about">about us</a></li>
+                                  <li class="menu__item"><a class="menu__link" href="#recent">portfolio</a></li>
+                                  <li class="menu__item"><a class="menu__link" href="#price">pricing</a></li>
+                                  <li class="menu__item"><a class="menu__link" href="#team">team</a></li>
+                                  <li class="menu__item"><a class="menu__link" href="#blog">blog</a></li>
+                                  <li class="menu__item"><a class="menu__link" href="#keep">contact</a></li>
                               </ul>
                           </nav>
                       </div>    
@@ -45,9 +45,9 @@
                   </div>    
               </div>
           </div>
-          <div class="section-wrap__icon">
-              <a href="#">
-                  <svg class="section-wrap__img">
+          <div class="section-wrap__img">
+              <a class="section-wrap__link" href="#advantages">
+                  <svg class="section-wrap__icon">
                       <use xlink:href="icons/sprite.svg#icon1">
                   </svg>
               </a>
@@ -55,7 +55,7 @@
       </div>
       <!-- /.section-wrap -->
 
-      <div class="advantages">
+      <div id="advantages" class="advantages">
         <ul class="wrap advantages__list">
           <li class="advantages__item">
             <div class="advantages__icon">
@@ -97,7 +97,7 @@
       </div>
       <!-- /.advantages -->
 
-      <div class="wrap history">
+      <div id="about" class="wrap history">
         <div class="history__left">
           <picture>
             <source srcset="img/monitor.webp" type="image/webp">
@@ -149,7 +149,7 @@
       </div>
       <!-- /.services -->
 
-      <div class="recent">
+      <div id="recent" class="recent">
         <p class="recent__title">recent works</p>
         <p class="recent__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, cum!</p>
         <div class="recent__divider divider"><p></p></div>
@@ -341,7 +341,7 @@
       </div>
       <!-- /.counts -->
 
-      <div class="price">
+      <div id="price" class="price">
         <div class="wrap">
           <p class="price__title">our pricing</p>
           <p class="price__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, cum!</p>
@@ -403,7 +403,7 @@
       </div>
       <!-- /.price -->
 
-      <div class="team">
+      <div id="team" class="team">
         <div class="wrap team__wrap">
           <p class="team__title">our team</p>
           <p class="team__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, cum!</p>
@@ -545,7 +545,7 @@
       </div>
       <!-- /.integrations -->
 
-      <div class="blog">
+      <div id="blog" class="blog">
         <p class="blog__title">our blog</p>
         <p class="blog__subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, cum!</p>
         <div class="divider blog__divider"><p></p></div>
@@ -610,6 +610,132 @@
       </div>
       <!-- /.blog -->
 
+      <div id="keep" class="keep">
+        <div class="wrap keep__wrap">
+          <p class="keep__title">keep in touch</p>
+          <p class="keep__subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, cum!</p>
+          <div class="divider keep__divider"><p></p></div>
+          <div class="keep__block">
+            <div class="keep__left">
+              <ul class="keep__contacts contacts">
+                <li class="contacts__item">
+                  <p class="contacts__title">our address</p>
+                  <p class="contacts__text">House #13, Streat road, Sydney 2310 Australia</p>
+                </li>
+                <li class="contacts__item">
+                  <p class="contacts__title">call us</p>
+                  <p class="contacts__text"><a class="contacts__link" href="tel:+0123456789">+ 0 123 456 789</a></p>
+                  <p class="contacts__text"><a class="contacts__link" href="tel:+9876543210">+ 9 876 543 210</a></p>
+                </li>
+                <li class="contacts__item">
+                  <p class="contacts__title">email us</p>
+                  <p class="contacts__text"><a class="contacts__link" href="mailto:info@example.com">info@example.com</a></p>
+                </li>
+              </ul>
+            </div>
+            <div class="keep__right">
+              <div class="keep__form form">
+                <form action="#">
+                  <div class="form__group">
+                    <label for="formName" class="form__label">Name</label>
+                    <input id="formName" type="text" name="name" class="form__control" required>
+                  </div>
+                  <div class="form__group">
+                    <label for="formEmail" class="form__label">Email</label>
+                    <input id="formEmail" type="email" name="email" class="form__control" required>
+                  </div>
+                  <div class="form__group">
+                    <label for="formSubject" class="form__label">Subject</label>
+                    <input id="formSubject" type="text" name="subject" class="form__control" required>
+                  </div>
+                  <div class="form__group">
+                    <label for="formMsg" class="form__label">Message</label>
+                    <textarea id="formMsg" name="message" class="form__control form__control--textarea" required></textarea>
+                  </div>
+                  <button class="form__btn" type="submit">send message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.keep -->
+
+      <div class="free">
+        <div class="wrap free__wrap">
+          <p class="free__title">let's get started now. it's free!</p>
+          <p class="free__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, maiores.</p>
+          <a href="#" class="free__btn">start free trial</a>
+        </div>
+      </div>
+      <!-- /.free -->
+
+      <footer class="page-footer">
+        <div class="wrap page-footer__wrap">
+          <div class="page-footer__left">
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                    <use xlink:href="icons/sprite.svg#social">
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                    <use xlink:href="icons/sprite.svg#social2">
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                    <use xlink:href="icons/sprite.svg#social3">
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                    <use xlink:href="icons/sprite.svg#social4">
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                    <use xlink:href="icons/sprite.svg#social5">
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                    <use xlink:href="icons/sprite.svg#social6">
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__right">
+            <p class="page-footer__copyright">Super Deging &copy; 2021 All Right Reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <!-- /.page-footer -->
+
+      <div id="topBtn" class="arrow-up">
+        <a href="#top" class="arrow-up__link">
+          <svg class="arrow-up__icon">
+            <use xlink:href="icons/sprite.svg#arrow-up">
+          </svg>
+        </a>
+      </div>
+      <!-- /.arrow-top -->
   </div>
+  <!-- /.container -->
+
+  <script src="js/main.min.js"></script>
 </body>
 </html>
